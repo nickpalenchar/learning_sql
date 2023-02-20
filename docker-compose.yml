@@ -21,6 +21,9 @@ services:
     ports:
       - 8888:80
     environment:
+      PGADMIN_DEFAULT_EMAIL: "admin@dev.null"
       PGADMIN_DEFAULT_PASSWORD: password
       PGADMIN_DISABLE_POSTFIX: "true"
+    volumes:
+      - "./superdatascience/files:/var/lib/pgadmin/storage/admin_dev.null"
 
